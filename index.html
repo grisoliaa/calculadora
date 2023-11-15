@@ -1,0 +1,110 @@
+<html>
+
+    <head>
+        <link href="style.css" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&family=Roboto+Mono:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="container">
+            <h1>
+                Calculadora
+            </h1>
+
+            <input id="display" disabled/>
+
+            <div class="botoes">
+                
+                <button onclick="limpar()">
+                    C
+                </button>
+
+                <button onclick="adicionarCaracter('/')">
+                    /
+                </button>
+
+                <button onclick="adicionarCaracter('*')">
+                    X
+                </button>
+
+                <button onclick="adicionarCaracter('-')">
+                    -
+                </button>
+
+                <button onclick="adicionarCaracter('1')">
+                    1
+                </button>
+
+                <button onclick="adicionarCaracter('2')">
+                    2
+                </button>
+
+                <button onclick="adicionarCaracter('3')">
+                    3
+                </button>
+
+                <button onclick="adicionarCaracter('+')">
+                    +
+                </button>
+
+                <button onclick="adicionarCaracter('4')">
+                    4
+                </button>
+
+                <button onclick="adicionarCaracter('5')">
+                    5
+                </button>
+
+                <button onclick="adicionarCaracter('6')">
+                    6
+                </button>
+
+                <button onclick="calcular()">
+                    =
+                </button>
+
+                <button onclick="adicionarCaracter('7')">
+                    7
+                </button>
+
+                <button onclick="adicionarCaracter('8')">
+                    8
+                </button>
+
+                <button onclick="adicionarCaracter('9')">
+                    9
+                </button>
+
+                <button onclick="adicionarCaracter('0')">
+                    0
+                </button>
+
+            </div>
+
+        </div>
+
+    </body>
+
+    <script>
+
+        var display = document.getElementById("display")
+
+        function adicionarCaracter(caracter) {
+            display.value = display.value + caracter
+            
+        }
+
+        function limpar() {
+            display.value = ""
+        }
+
+        function calcular() {
+            display.value = eval(display.value)
+        }
+
+    </script>
+
+</html>
